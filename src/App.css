@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minecraft-Fivev2.css */
+@font-face {
+    font-family: "Minecraft-Fivev2";
+    src: url("/fonts");
+    src: url("/fonts/Minecraft-Fivev2.woff2") format("woff2"),
+        url("/fonts/Minecraft-Fivev2.woff") format("woff"),
+        url("/fonts/Minecraft-Fivev2.ttf") format("truetype");
+}
+
+/* Webfont: MinecraftFive-Bold */
+@font-face {
+    font-family: "MinecraftFive";
+    src: url("/fonts/MinecraftFive-Bold.eot"); /* IE9 Compat Modes */
+    src: url("/fonts/MinecraftFive-Bold.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("/fonts/MinecraftFive-Bold.woff") format("woff"),
+        /* Modern Browsers */ url("/fonts/MinecraftFive-Bold.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("/fonts/MinecraftFive-Bold.svg#MinecraftFive-Bold")
+            format("svg"); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: MinecraftFive-Regular */
+@font-face {
+    font-family: "MinecraftFive";
+    src: url("/fonts/MinecraftFive-Regular.eot"); /* IE9 Compat Modes */
+    src: url("/fonts/MinecraftFive-Regular.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("/fonts/MinecraftFive-Regular.woff") format("woff"),
+        /* Modern Browsers */ url("/fonts/MinecraftFive-Regular.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("/fonts/MinecraftFive-Regular.svg#MinecraftFive-Regular")
+            format("svg"); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: MinecraftSeven */
+@font-face {
+    font-family: "MinecraftSeven";
+    src: url("/fonts/MinecraftSeven.eot"); /* IE9 Compat Modes */
+    src: url("/fonts/MinecraftSeven.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("/fonts/MinecraftSeven.woff") format("woff"),
+        /* Modern Browsers */ url("/fonts/MinecraftSeven.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("/fonts/MinecraftSeven.svg#MinecraftSeven") format("svg"); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Minecraft Seven V2 */
+@font-face {
+    font-family: "MinecraftSeven-v2";
+    src: url("/fonts/Minecraft-Seven_v2.eot");
+    src: url("/fonts/Minecraft-Seven_v2.woff2") format("woff2"),
+        url("/fonts/Minecraft-Seven_v2.woff") format("woff"),
+        url("/fonts/Minecraft-Seven_v2.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: MinecraftTen */
+@font-face {
+    font-family: "MinecraftTen";
+    src: url("/fonts/MinecraftTen.eot"); /* IE9 Compat Modes */
+    src: url("/fonts/MinecraftTen.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */ url("/fonts/MinecraftTen.woff") format("woff"),
+        /* Modern Browsers */ url("/fonts/MinecraftTen.ttf") format("truetype"),
+        /* Safari, Android, iOS */ url("/fonts/MinecraftTen.svg#MinecraftTen") format("svg"); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+body,
+html,
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "MinecraftSeven-v2", "MinecraftSeven", monospace;
+}
+
+/* Background patterns */
+.bg-stone {
+    background-image: url("/stone.png");
+    background-repeat: repeat;
+    background-size: 75px;
+    image-rendering: pixelated;
+}
+
+.bg-nether {
+    background-image: url("/nether.png");
+    background-repeat: repeat;
+    background-size: 75px;
+    image-rendering: pixelated;
+}
+
+.bg-end {
+    background-image: url("/end.png");
+    background-repeat: repeat;
+    background-size: 75px;
+    image-rendering: pixelated;
+}
+
+.bg-farm {
+    background-image: url("/husbandry.png");
+    background-repeat: repeat;
+    background-size: 75px;
+    image-rendering: pixelated;
+}
+
+.bg-sand {
+    background-image: url("/adventure.png");
+    background-repeat: repeat;
+    background-size: 75px;
+    image-rendering: pixelated;
+}
+
+/* Minecraft font utility */
+.font-minecraft {
+    font-family: "MinecraftSeven-v2", "MinecraftSeven", monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #374151;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6b7280;
+    border-radius: 6px;
+    border: 2px solid #374151;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Custom focus styles */
+.focus\:ring-yellow-300:focus {
+    --tw-ring-color: #fde047;
+}
+
+/* File input styling */
+input[type="file"]::-webkit-file-upload-button {
+    background: #ca8a04;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    color: black;
+    font-family: "MinecraftSeven-v2", "MinecraftSeven", monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: #eab308;
+}
