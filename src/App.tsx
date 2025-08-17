@@ -3,7 +3,6 @@ import "./App.css";
 import Tab from "./Tab";
 import { AdvancementDetails, Advancements, advancements, Criteria } from "./advancementList";
 
-// Define advancement categories
 const ADVANCEMENT_CATEGORIES = [
     { id: "story", name: "Story", icon: "stone.png", background: "stone" },
     { id: "nether", name: "Nether", icon: "nether.png", background: "nether" },
@@ -87,7 +86,6 @@ export function App() {
                         Minecraft Advancement Tracker
                     </h1>
 
-                    {/* File Upload Section */}
                     <div className="max-w-md mx-auto bg-gray-800 rounded-lg p-6 border-2 border-gray-600">
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div className="flex flex-col space-y-2">
@@ -112,16 +110,13 @@ export function App() {
                 </div>
             </div>
 
-            {/* Main Content */}
             <div className="container mx-auto px-4 py-8">
-                {/* Progress Overview */}
                 {userInput && (
                     <h2 className="text-2xl font-minecraft text-yellow-400 mb-4">
                         Overall Progress: {countDone} / {Object.keys(advancements).length}
                     </h2>
                 )}
 
-                {/* Category Tabs */}
                 <div className="flex justify-center mb-8">
                     <div className="bg-gray-800 rounded-lg p-2 border-2 border-gray-600">
                         <div className="flex space-x-2">
@@ -155,7 +150,6 @@ export function App() {
                     </div>
                 </div>
 
-                {/* Hide Completed Toggle */}
                 {userInput && (
                     <div className="flex justify-center mb-6">
                         <label className="inline-flex items-center cursor-pointer">
@@ -173,7 +167,6 @@ export function App() {
                     </div>
                 )}
 
-                {/* Advancements List */}
                 {userInput && (
                     <div className={`rounded-lg p-6 border-2 border-gray-600 min-h-96 relative overflow-hidden ${currentBackground === 'stone' ? 'bg-stone' :
                         currentBackground === 'nether' ? 'bg-nether' :
@@ -181,10 +174,8 @@ export function App() {
                                 currentBackground === 'farm' ? 'bg-farm' :
                                     currentBackground === 'sand' ? 'bg-sand' : 'bg-stone'
                         }`}>
-                        {/* Background overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-10"></div>
 
-                        {/* Content */}
                         <div className="relative z-10">
                             <h2 className="text-3xl font-minecraft text-yellow-400 mb-6 text-center">
                                 {ADVANCEMENT_CATEGORIES.find(cat => cat.id === selectedCategory)?.name} Advancements
@@ -203,7 +194,6 @@ export function App() {
                     </div>
                 )}
 
-                {/* Welcome Message */}
                 {!userInput && (
                     <div className="text-center py-16">
                         <div className="bg-gray-800 rounded-lg p-8 border-2 border-gray-600 max-w-2xl mx-auto">

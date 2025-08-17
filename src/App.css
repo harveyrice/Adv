@@ -127,7 +127,6 @@ html,
     font-family: "MinecraftSeven-v2", "MinecraftSeven", monospace;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -147,17 +146,14 @@ html,
     background: #9ca3af;
 }
 
-/* Smooth transitions */
 * {
     transition: all 0.2s ease-in-out;
 }
 
-/* Custom focus styles */
 .focus\:ring-yellow-300:focus {
     --tw-ring-color: #fde047;
 }
 
-/* File input styling */
 input[type="file"]::-webkit-file-upload-button {
     background: #ca8a04;
     border: none;
